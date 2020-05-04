@@ -1,0 +1,222 @@
+#thongtin-sanpham {
+    width: 1175px;
+    height: 697px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.cottrai1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cottrai1 img {
+    cursor: pointer;
+}
+
+.cottrai1 img:hover {
+    opacity: 0.2 !important;
+}
+
+.cottrai {
+    width: 650px;
+    height: 697px;
+    float: left;
+    position: absolute;
+}
+
+.cotphai {
+    width: 482px;
+    height: 697px;
+    float: right;
+}
+
+.cottrai1 {
+    width: 97px;
+    height: 697px;
+    float: left;
+}
+
+.cottrai1 img {
+    display: block;
+}
+
+.sp1 {
+    width: 97px;
+    height: 125px;
+    float: left;
+}
+
+.sp2 {
+    width: 97px;
+    height: 125px;
+    margin-top: 143px;
+}
+
+.sp3 {
+    width: 97px;
+    height: 125px;
+    margin-top: 18px;
+}
+
+.sp4 {
+    width: 97px;
+    height: 125px;
+    margin-top: 16px;
+}
+
+.sp5 {
+    width: 97px;
+    height: 125px;
+    margin-top: 18px;
+}
+
+.cottrai-con {
+    width: 531px;
+    height: 697px;
+    float: right;
+}
+
+.selection1 {
+    width: 482px;
+    height: 109px;
+}
+
+.selection-trai {
+    width: 220px;
+    height: 109px;
+    float: left;
+}
+
+select {
+    outline: none;
+}
+
+select:hover {
+    border: 3px solid black;
+}
+
+.selection-phai {
+    width: 220px;
+    height: 109px;
+    float: right;
+}
+
+select {
+    width: 220px;
+    height: 80px;
+    font-size: 18.67px;
+    text-indent: 30px;
+    border: 1px solid black;
+}
+
+.selection2 {
+    width: 482px;
+    height: 80px;
+    margin-top: 40px;
+}
+
+.themvaogiohang {
+    width: 247px;
+    height: 80px;
+    background-color: black;
+    float: left;
+}
+
+.themvaogiohang:hover {
+    opacity: 0.7;
+}
+
+.themvaogiohang p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    line-height: 80px;
+}
+
+.yeuthichsanpham {
+    width: 220px;
+    height: 80px;
+    float: right;
+}
+
+.yeuthichsanpham:hover {
+    opacity: 0.2 !important;
+}
+
+.yeuthichsanpham img {
+    float: left;
+    margin-top: 28px;
+}
+
+.yeuthichsanpham p {
+    float: left;
+    text-indent: 20px;
+    line-height: 80px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#mota-chitiet {
+    width: 1175px;
+    height: 295px;
+    margin: 0 auto;
+    margin-top: 81px;
+}
+
+.tab li {
+    float: left;
+    text-indent: 80px;
+}
+
+#mota {
+    text-align: center;
+    font-size: 21.33px;
+    margin-top: 20px;
+}
+
+.chitiet-trai {
+    width: 587px;
+    height: 250px;
+    float: left;
+}
+
+.chitiet-phai {
+    width: 587px;
+    height: 250px;
+    float: right;
+}
+
+.chitiet-trai ul li,
+.chitiet-phai ul li {
+    margin-left: 200px;
+    list-style-type: disc !important;
+    font-size: 18px;
+}
+
+#listsanphamlienquan {
+    width: 1175px;
+    height: 645px;
+    margin: 0 auto;
+    margin-top: 65px;
+}
+
+.mbuttonsp img:hover {
+    background-image: url(images/timden.png);
+}
+
+.mbuttonsp img {
+    margin-left: 14px !important;
+    margin-bottom: 5px !important;
+}
+
+.cart {
+    position: absolute;
+}

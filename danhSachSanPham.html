@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/danhSachSanPham.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/hoTro.js"></script>
+    <script src="js/sanPham.js"></script>
+    <script src="js/sanPham1.js"></script>
+    <script src="js/gioHang.js"></script>
+    <script src="js/yeuThich.js"></script>
+    <script src="js/danhSachSanPham.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="header-tren">
+            <div class="thanhtren">
+                <div class="lienket">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#nu">Nữ</a>
+                                <ul class="menucon">
+                                    <div class="cot-menucon-trai">
+                                        <div class="cot-menucon-trai-1">
+                                            <ul>
+                                                <li>
+                                                    <a href="#maumoi">Mẫu Mới</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#banchaynhat">Bán Chạy Nhất</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#xuhuonghiennay">Xu Hướng Hiện Nay</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cot-menucon-trai-2">
+                                            <div class="cot-menucon-trai-2-1">
+                                                <ul>
+                                                    <li>
+                                                        <a style="font-weight: bold;font-size: 17.28px!important;" href="#giay">Giày</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tatcagiay">Tất Cả Giày</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#chaybo">Chạy Bộ</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#chaybogym">Chạy Bộ & Gym</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#bongro">Bóng Rổ</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#bongda">Bóng Đá</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#bongchay">Bóng Chày</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#giaysandal">Giày Sandal</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="cot-menucon-trai-2-2">
+                                                <div class="cot-menucon-trai-2-2-1">
+                                                    <ul>
+                                                        <li>
+                                                            <a style="font-weight: bold;font-size: 17.28px!important;" href="#quanao">Quần Áo</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#aophongaokhongtay">Áo Phông & Áo Không Tay</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#aoni">Áo Nỉ</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#aongucthethao">Áo Ngực Thể Thao</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#aohoodieaosoc">Áo Hoodie & Áo Sọc</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#aokhoac">Áo Khoác</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#quanbo">Quần Bó</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#quansooc">Quần Sóoc</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cot-menucon-phai">
+                                        <div class="cot-menucon-phai-1">
+                                            <div class="cot-menucon-phai-1-1">
+                                                <ul>
+                                                    <li>
+                                                        <a style="font-weight: bold;font-size: 17.28px!important;" href="#phukien">Phụ Kiện</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tatcatui">Tất Cả Túi</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#balo">Balo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tuitapluyen">Túi Tập Luyện</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tat">Tất</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#muiluoitraidoidau">Mũ Lưỡi Trai & Đội Đầu</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#gangtaykhanquangco">Găng Tay & Khăn Quàng Cổ</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#phukientruyenthong">Phụ Kiện Truyền Thống</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cot-menucon-phai-2">
+                                            <div class="cot-menucon-phai-2-1">
+                                                <ul>
+                                                    <li>
+                                                        <a style="font-weight: bold;font-size: 17.28px!important;" href="#thethao">Thể Thao</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#chay">Chạy</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tapluyen">Tập Luyện</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tapyoga">Tập Yoga</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#danhgon">Đánh Gôn</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#quanvot">Quần Vợt</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#dabong">Đá Bóng</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#bongro">Bóng Rổ</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#nam">Nam</a>
+                                <ul class="menucon">
+                                    <div class="cot-menucon-trai">
+                                        <div class="cot-menucon-trai-1">
+                                            <ul>
+                                                <li>
+                                                    <a href="#maumoi">Mẫu Mới</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#banchaynhat">Bán Chạy Nhất</a>
+                                                </li>
+                                                <li>
+                                                    <a>Xu Hướng Hiện Nay</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="cot-menucon-trai-2">
+                                            <div class="cot-menucon-trai-2-1">
+                                                <ul>
+                                                    <li>
+                                                        <a style="font-weight: bold;font-size: 17.28px!important;" href="#giay">Giày</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tatcagiay">Tất Cả Giày</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#chaybo">Chạy Bộ</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#chaybogym">Chạy Bộ & Gym</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#bongro">Bóng Rổ</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#bongda">Bóng Đá</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#bongchay">Bóng Chày</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#giaysandal">Giày Sandal</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="cot-menucon-trai-2-2">
+                                                <div class="cot-menucon-trai-2-2-1">
+                                                    <ul>
+                                                        <li>
+                                                            <a style="font-weight: bold;font-size: 17.28px!important;" href="#quanao">Quần Áo</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#aophongaokhongtay">Áo Phông & Áo Không Tay</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#aoni">Áo Nỉ</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#aothethao">Áo Thể Thao</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#aohoodieaosoc">Áo Hoodie & Áo Sọc</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#aokhoac">Áo Khoác</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#quanbo">Quần Bó</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#quansooc">Quần Sóoc</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cot-menucon-phai">
+                                        <div class="cot-menucon-phai-1">
+                                            <div class="cot-menucon-phai-1-1">
+                                                <ul>
+                                                    <li>
+                                                        <a style="font-weight: bold;font-size: 17.28px!important;" href="#phukien">Phụ Kiện</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tatcatui">Tất Cả Túi</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#balo">Balo</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tuitapluyen">Túi Tập Luyện</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tat">Tất</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#muiluoitraidoidau">Mũ Lưỡi Trai & Đội Đầu</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#gangtaykhanquangco">Găng Tay & Khăn Quàng Cổ</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#phukientruyenthong">Phụ Kiện Truyền Thống</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cot-menucon-phai-2">
+                                            <div class="cot-menucon-phai-2-1">
+                                                <ul>
+                                                    <li>
+                                                        <a style="font-weight: bold;font-size: 17.28px!important;" href="#thethao">Thể Thao</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#chay">Chạy</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tapluyen">Tập Luyện</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#tapyoga">Tập Yoga</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#danhgon">Đánh Gôn</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#quanvot">Quần Vợt</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#dabong">Đá Bóng</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#bongro">Bóng Rổ</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about.html">Thông tin</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="thanhphai">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+                    </div>
+                    <div class="icon">
+                        <div class="oicon">
+
+                            <div class="active2">
+                                <div class="active4">
+                                    <a href="#timkiem"><img src="images/search.png" alt="search"></a>
+                                </div>
+                                <div class="active1">
+                                    <a href="#yeuthich"><img src="images/love.png" alt="yeuthich"></a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </header>
+    <div id="wrapper">
+
+        <div class="row-left">
+            <div class="cart-icon-top" id="cart-icon">
+            </div>
+
+            <div class="cart-icon-bottom">
+            </div>
+            <div id="sidebar">
+
+                <h3>GIỎ HÀNG</h3>
+                <div id="cart">
+                    <div id="checkout">
+                        <a href="buy.html">CHECKOUT</a>
+                    </div>
+                    <span class="empty">Không có mặt hàng trong giỏ hàng.</span>
+
+                </div>
+
+                <h3>THỂ LOẠI</h3>
+                <div class="checklist categories">
+                    <ul>
+                        <li><a href=""><span></span>Mẫu mới</a></li>
+                        <li><a href=""><span></span>Phụ kiện</a></li>
+                        <li><a href=""><span></span>Túi</a></li>
+                        <li><a href=""><span></span>Quần áo</a></li>
+                        <li><a href=""><span></span>Áo khoác</a></li>
+                        <li><a href=""><span></span>Trang sức</a></li>
+                        <li><a href=""><span></span>Giày</a></li>
+                        <li><a href=""><span></span>Áo sơ mi</a></li>
+                        <li><a href=""><span></span>Áo len</a></li>
+                        <li><a href=""><span></span>Áo thun</a></li>
+                    </ul>
+                </div>
+
+                <h3>MÀU</h3>
+                <div class="checklist colors">
+                    <ul>
+                        <li><a href=""><span></span>Xám Tro</a></li>
+                        <li><a href=""><span style="background:#222"></span>Đen</a></li>
+                        <li><a href=""><span style="background:#6e8cd5"></span>Xanh da trời</a></li>
+                        <li><a href=""><span style="background:#f56060"></span>Nâu</a></li>
+                        <li><a href=""><span style="background:#44c28d"></span>Xanh lá cây</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href=""><span style="background:#999"></span>Xám</a></li>
+                        <li><a href=""><span style="background:#f79858"></span>Cam</a></li>
+                        <li><a href=""><span style="background:#b27ef8"></span>Tím</a></li>
+                        <li><a href=""><span style="background:#f56060"></span>Đỏ</a></li>
+                        <li><a href=""><span style="background:#fff;border: 1px solid #e8e9eb;width:13px;height:13px;"></span>Trắng</a></li>
+                    </ul>
+                </div>
+
+                <h3>KÍCH CỠ</h3>
+                <div class="checklist sizes">
+                    <ul>
+                        <li><a href=""><span></span>XS</a></li>
+                        <li><a href=""><span></span>S</a></li>
+                        <li><a href=""><span></span>M</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href=""><span></span>L</a></li>
+                        <li><a href=""><span></span>XL</a></li>
+                        <li><a href=""><span></span>XXL</a></li>
+                    </ul>
+                </div>
+
+                <h3>PHẠM VI GIÁ</h3>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/price-range.png" alt="" />
+            </div>
+        </div>
+
+
+
+        <div class="row-right">
+            <div id="grid-selector">
+                <div id="grid-menu">
+                    Xem:
+                    <ul>
+                        <li class="largeGrid">
+                            <a href=""></a>
+                        </li>
+                        <li class="smallGrid">
+                            <a class="active" href=""></a>
+                        </li>
+                    </ul>
+                </div>
+
+                Hiển thị 1-9 trên 48 kết quả
+            </div>
+            <div id="grid">
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <hr>
+            <div class="phancuoi">
+                <div class="top">
+                    <div class="top-1">
+                        <div class="top1">
+                            <ul>
+                                <li>
+                                    <a href="#chinhsach">Chính sách</a>
+                                </li>
+                                <li>
+                                    <a href="#dieukien">Điều kiện</a>
+                                </li>
+                                <li>
+                                    <a href="#faqs">FAQS</a>
+                                </li>
+                                <li>
+                                    <a href="#hotro">Hỗ trợ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="top-2">
+                        <div class="top2">
+                            <div class="top3">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Instargram">Instargram</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Twitter">Twitter</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Youtube">Youtube</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-1">
+                    <a href="https://www.facebook.com/O.o.HVN.Official.o.O">© Design By Huỳnh Văn Nam</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        var jsonDanhSachSanPham = localStorage.getItem('danhSachSanPham');
+        var danhSachSanPham = taoDoiTuongSanPham().fromJSONs(jsonDanhSachSanPham);
+        console.log(danhSachSanPham);
+        if (danhSachSanPham == null) {
+            danhSachSanPham = new Array();
+        }
+
+        var HTML = danhSachSanPhamSangHTML(danhSachSanPham);
+
+        var nodeProducts = document.getElementById('grid');
+        nodeProducts.innerHTML = HTML;
+        console.log(nodeProducts);
+
+        function onCLickDuaVaoGioiHang(idSanPham) {
+            // alert("Thêm ID " + idSanPham + " vào giỏ hàng thành công");
+
+            // LOGIC ĐƯA VÀO GIỎ HÀNG
+            // Bước 1: Phân tích dạng dữ liệu lưu trữ trong giỏ hàng là gì
+            // Danh sách các đối tượng là item giỏ hàng
+            // Item giỏ hàng là gì
+            //          - id của sản phẩm
+            //          - số lượng của sản phẩm
+            // 1. Lấy giỏ hàng cũ từ local storage lên
+            var danhSachItemGioHang = layGioHangTuLocalStorage();
+            // 2. Thêm sản phẩm vào danh sách giỏ hàng
+            var coTonTaiTrongDanhSachItemGioHang = false;
+            for (var i = 0; i < danhSachItemGioHang.length; i++) {
+                var itemGioHangHienTai = danhSachItemGioHang[i];
+                // Nếu tồn tại, thì tăng số lượng lên
+                if (itemGioHangHienTai.idSanPham == idSanPham) {
+                    danhSachItemGioHang[i].soLuong++;
+                    coTonTaiTrongDanhSachItemGioHang = true;
+                }
+            }
+
+            // Nếu tồn tại -> tạo ra đối tượng và thêm vào danh sách item giỏ hàng
+            if (coTonTaiTrongDanhSachItemGioHang == false) {
+                var itemGioHang = TaoDoiTuongItemGioHang(idSanPham, 1);
+                danhSachItemGioHang.push(itemGioHang);
+            }
+            luuGioHangVaoLocalStorage(danhSachItemGioHang);
+
+        }
+
+        function onCLickDuaVaoYeuThich(idSanPham) {
+            alert("Thêm ID " + idSanPham + " vào yêu thích thành công");
+            var yeuThichCu = layYeuThichTuLocalStorage();
+            // 2. Thêm sản phẩm vào giỏ hàng cũ
+            var yeuThichMoi = themSanPhamVaoYeuThich(idSanPham, yeuThichCu);
+            luuYeuThichVaoLocalStorage(yeuThichMoi);
+
+        }
+    </script>
+</body>
+
+</html>

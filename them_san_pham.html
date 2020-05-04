@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm sản phẩm mới</title>
+    <link rel="stylesheet" href="css/themsanpham.css" type="text/css">
+    <script src="js/hoTro.js"></script>
+    <script src="js/form-validate.js"></script>
+    <script src="js/sanPham.js"></script>
+    <script src="js/sanPham1.js"></script>
+    <script src="js/gioHang.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>THÊM SẢN PHẨM MỚI</h1>
+        <input khongDeTrong noiDungDeTrong='Hình ảnh không được để trống' type="text" id="hinhAnhGoc" required>
+        <label for="hinhAnhGoc" placeholder="Nhập đường dẫn ảnh gốc" alt="Link ảnh gốc"></label>
+        <label for="hinhAnhGoc" class="error"></label>
+
+        <input khongDeTrong noiDungDeTrong='Hình ảnh không được để trống' type="text" id="hinhAnhPhu1" required>
+        <label for="hinhAnhPhu1" placeholder="Nhập đường dẫn ảnh phụ 1" alt="Link ảnh phụ 1"></label>
+        <label for="hinhAnhPhu1" class="error"></label>
+
+        <input khongDeTrong noiDungDeTrong='Hình ảnh không được để trống' type="text" id="hinhAnhPhu2" required>
+        <label for="hinhAnhPhu2" placeholder="Nhập đường dẫn ảnh phụ 2" alt="Link ảnh phụ 2"></label>
+        <label for="hinhAnhPhu2" class="error"></label>
+
+        <input khongDeTrong noiDungDeTrong='Hình ảnh không được để trống' type="text" id="hinhAnhPhu3" required>
+        <label for="hinhAnhPhu3" placeholder="Nhập đường dẫn ảnh phụ 3" alt="Link ảnh phụ 3"></label>
+        <label for="hinhAnhPhu3" class="error"></label>
+
+        <input khongDeTrong noiDungDeTrong='Tên sản phẩm không được để trống' type="text" id="ten" required>
+        <label for="ten" placeholder="Nhập tên sản phẩm" alt="Tên sản phẩm"></label>
+        <label for="ten" class="error"></label>
+
+        <input khongDeTrong noiDungDeTrong='Giá sản phẩm không được để trống' type="text" id="giaGoc" required>
+        <label for="giaGoc" placeholder="Nhập giá gốc của sản phẩm" alt="Giá gốc sản phẩm"></label>
+        <label for="giaGoc" class="error"></label>
+
+        <input khongNhoHon0VaLonHon100 type="text" id="phanTramGiamGia" required>
+        <label for="phanTramGiamGia" placeholder="Nhập phần trăm giảm giá (1-100)%" alt="Phần trăm giảm giá sản phẩm"></label>
+        <label for="phanTramGiamGia" class="error"></label>
+
+        <button onclick="onClickThemMoiSanPham()" class="btn">Thêm mới sản phẩm</button>
+    </div>
+
+    <script>
+        function onClickThemMoiSanPham() {
+            // Bước 1: Lấy danh sách từ dưới local storage lên
+            var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+            if (danhSachSanPham == null) {
+                danhSachSanPham = new Array();
+            }
+            if (kiemTraFormValidate() == true) {
+                // Bước 2: Truy cập toàn bộ node input để lấy dữ liệu: hinhAnh, ten, giaGoc,...
+                var nodeHinhAnhGoc = document.getElementById('hinhAnhGoc');
+                var hinhAnhGoc = nodeHinhAnhGoc.value;
+
+                var nodeHinhAnhPhu1 = document.getElementById('hinhAnhPhu1');
+                var hinhAnhPhu1 = nodeHinhAnhPhu1.value;
+
+                var nodeHinhAnhPhu2 = document.getElementById('hinhAnhPhu2');
+                var hinhAnhPhu2 = nodeHinhAnhPhu2.value;
+
+                var nodeHinhAnhPhu3 = document.getElementById('hinhAnhPhu3');
+                var hinhAnhPhu3 = nodeHinhAnhPhu3.value;
+
+                var nodeTen = document.getElementById('ten');
+                var ten = nodeTen.value;
+
+                var nodeGiaGoc = document.getElementById('giaGoc');
+                var giaGoc = parseInt(nodeGiaGoc.value);
+
+                var nodePhanTramGiam = document.getElementById('phanTramGiamGia');
+                var phanTramGiamGia = parseFloat(nodePhanTramGiam.value);
+
+                // Bước 2: Tạo ra đối tượng từ dữ liệu input
+                var sanPham = taoDoiTuongSanPham(hinhAnhGoc, hinhAnhPhu1, hinhAnhPhu2, hinhAnhPhu3, ten, giaGoc, phanTramGiamGia);
+                console.log(sanPham);
+                console.log("Tên của sản phẩm là: " + sanPham.ten + " Giá bán của sản phẩm là: " + sanPham.tinhGiaBan());
+
+                // Bước 3: Thêm sản phẩm người dùng nhập vào trong danh sách cũ
+                danhSachSanPham.push(sanPham);
+                console.log("Danh sách các sản phẩm là: ");
+                console.log(danhSachSanPham);
+
+                // Bước 4: Cập nhật lại danh sách xuống local storage
+                var jsonDanhSachSanPham = JSON.stringify(danhSachSanPham);
+                localStorage.setItem('danhSachSanPham', jsonDanhSachSanPham);
+                alert("Thêm sản phẩm thành công");
+
+            }
+
+        }
+
+        function kiemTraFormValidate() {
+
+            var hople1 = true,
+                hople2 = true;
+            hople1 = kiemTraFormValidateCacInputDeTrong();
+            hople2 = kiemTraFormValidateInputPhanTramGiamGia();
+            return hople1 && hople2;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+#khungthongbao {
+    width: 1175px;
+    height: 935px;
+    background-color: gray;
+    margin: 0 auto;
+    margin-top: 90px;
+    position: relative;
+    text-align: center;
+}
+
+#khungthongbao p {
+    position: absolute;
+    font-size: 48.01px;
+    font-weight: bold;
+    bottom: 700px;
+    left: 200px;
+}
+
+.homepage {
+    width: 227px;
+    height: 80px;
+    background-color: black;
+    position: absolute;
+    top: 700px;
+    margin-left: 470px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 80px;
+}

@@ -1,0 +1,69 @@
+.text-nhanhieu{
+    width: 1175px;
+    height: 65px;
+    margin: 0 auto;
+    margin-top: 130px;
+}
+
+.text-nhanhieu p{
+    text-align: center;
+    font-size: 26.66px;
+}
+
+#block1{
+    width: 1175px;
+    height: 590px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+.block1-left{
+    width: 590px;
+    height: 590px;
+    float: left;
+}
+
+.block1-right{
+    width: 585px;
+    height: 590px;
+    float: right;
+}
+
+.chamtron{
+    width: 42px;
+    height: 42px;
+    background-color: #ffd2c1;
+    border-radius: 84px;
+    margin: 0 auto;
+    margin-top: 93px;
+}
+
+.text-block{
+    width: 514px;
+    height: 261px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 19.11px;
+}
+
+#block2{
+    width: 1175px;
+    height: 590px;
+    margin: 0 auto;
+    margin-top: 136px;
+}
+
+.block2-left{
+    width: 585px;
+    height: 590px;
+    float: left;
+}
+
+.block2-right{
+    width: 590px;
+    height: 590px;
+    float: right;
+}
+
+
