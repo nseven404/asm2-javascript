@@ -56,30 +56,15 @@ function taoDoiTuongSanPham(hinhAnhGoc, hinhAnhPhu1, hinhAnhPhu2, hinhAnhPhu3, t
 function laySanPhamTheoId(idSanPham) {
     var sanPham = new Object();
     // Bước 1: Lấy toàn bộ sản phẩm trong localStorage ra
-    var danhSachSanPham = layDanhSachSanPhamDuoiLocalStorage();
+    var danhSachSanPham = layDanhSachSanPhamDuoiLocalStorage('danhSachSanPham');
     // console.log(danhSachSanPham);
     // Bước 2: Duyệt danh sách sản phẩm để tìm ra sản phẩm nào có ID sản phẩm
     for (var i = 0; i < danhSachSanPham.length; i++) {
         var sanPhamHienTai = danhSachSanPham[i];
-        console.log(sanPhamHienTai);
         if (sanPhamHienTai.id == idSanPham) {
             sanPham = sanPhamHienTai;
         }
     }
     sanPham = taoDoiTuongSanPham(sanPham.hinhAnhGoc, sanPham.hinhAnhPhu1, sanPham.hinhAnhPhu2, sanPham.hinhAnhPhu3, sanPham.ten, sanPham.giaGoc, sanPham.phanTramGiamGia, sanPham.id);
     return sanPham;
-}
-
-function layDanhSachSanPhamDuoiLocalStorage() {
-    var jsonDanhSachSanPham = localStorage.getItem('danhSachSanPham');
-
-    var danhSachSanPham = JSON.parse(jsonDanhSachSanPham);
-    return danhSachSanPham;
-}
-
-function setDanhSachSanPhamXuongLocalStorage() {
-    var jsonDanhSachSanPham = localStorage.setItem('danhSachSanPham');
-
-    var danhSachSanPham = JSON.parse(jsonDanhSachSanPham);
-    return danhSachSanPham;
 }

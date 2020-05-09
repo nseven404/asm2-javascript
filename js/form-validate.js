@@ -78,25 +78,24 @@ function layNoiDungHienThiLoiTheoNodeInputPhanTram(nodeInput) {
 function kiemTraFormValidateCacInputFormEmail() {
     var hopLe = true;
     var danhSachNodeInputKhongDeTrong = document.querySelectorAll('input[saiDinhDangEmail]');
+
     for (var i = 0; i < danhSachNodeInputKhongDeTrong.length; i++) {
         var nodeInputKhongDeTrong = danhSachNodeInputKhongDeTrong[i];
-        // Lấy dữ liệu trong node Input
-        var giaTri = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$\b/g;
-        giaTri = nodeInputKhongDeTrong.value;
-        // Truy xuất tới node hiển thị lỗi
+        var giaTri = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(nodeInputKhongDeTrong.value)
+            // Truy xuất tới node hiển thị lỗi
         var idNodeInput = nodeInputKhongDeTrong.getAttribute('id');
         var nodeHienThiLoi = truyXuatNodeHienThiLoiTheoInputIdEmail(idNodeInput);
         // Kiểm tra giá trị, nếu giá trị để trống thì hiển thị lên nodeHienThiLoi
-        if (giaTri == false) {
-            hopLe = false;
+        if (!giaTri) {
+            hopLe = giaTri;
             var noiDungLoi = layNoiDungHienThiLoiTheoNodeInputEmail(nodeInputKhongDeTrong);
             nodeHienThiLoi.innerHTML = noiDungLoi;
         }
     }
 
-
     return hopLe;
 }
+
 // Truy xuất node hiển thị lỗi theo inputId
 function truyXuatNodeHienThiLoiTheoInputIdEmail(inputId) {
     var nodeHienThiLoi = document.querySelector('label.error[for="' + inputId + '"]');
@@ -120,14 +119,14 @@ function kiemTraFormValidateInputDienThoai() {
     for (var i = 0; i < danhSachNodeInputPhanTramGiamGia.length; i++) {
         var nodeInputDienThoai = danhSachNodeInputPhanTramGiamGia[i];
         // Lấy dữ liệu trong node Input
-        var giaTri = nodeInputDienThoai.value;
+        var giaTri = /^[0-9]+$/.test(nodeInputDienThoai.value);
         // Truy xuất tới node hiển thị lỗi
         var idNodeInput = nodeInputDienThoai.getAttribute('id');
         // console.log('id node input là: ' + idNodeInput);
         var nodeHienThiLoi = truyXuatNodeHienThiLoiTheoInputIdDienThoai(idNodeInput);
         // Kiểm tra giá trị, nếu giá trị để trống thì hiển thị lên nodeHienThiLoi
-        if (giaTri == null || giaTri.length < 10 || giaTri == /((09|03|07|08|05)+([0-9]{8})\b)/g) {
-            hopLe = false;
+        if (giaTri == null || giaTri.length < 10 || !giaTri) {
+            hopLe = giaTri;
             var noiDungLoi = layNoiDungHienThiLoiTheoNodeInputDienThoai(nodeInputDienThoai);
             nodeHienThiLoi.innerHTML = noiDungLoi;
         }
@@ -149,4 +148,9 @@ function layNoiDungHienThiLoiTheoNodeInputDienThoai(nodeInput) {
         noiDungLoi = nodeInput.getAttribute('noiDungSoDienThoai');
     }
     return noiDungLoi;
+}
+
+function anHienThiLoi() {
+    var nodeHienThiLoi = document.querySelector('label.error[for="' + event.target.id + '"]');
+    nodeHienThiLoi.innerHTML = '';
 }

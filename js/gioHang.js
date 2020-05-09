@@ -44,10 +44,6 @@ function TaoDoiTuongItemGioHang(idSanPham, soLuong) {
     return itemGioHang;
 }
 
-function phuongThucGiaoHang() {
-    console.log(event.target.value);
-}
-
 function thayDoiSoLuong(id) {
     // Lấy số lượng
     var soLuong = event.target.value;
@@ -59,41 +55,48 @@ function thayDoiSoLuong(id) {
         soLuong = 1;
     }
     event.target.value = soLuong;
-    var nodeSanPham = event.target.parentElement;
+    var nodechua = event.target.parentElement;
+    var nodeSanPham = nodechua.parentElement;
 
     // Lưu lại số lượng lên gioHang
     if (soLuong > 0) {
         var duLieuGioHang = layDanhSachSanPhamDuoiLocalStorage('gioHang');
         for (var i = 0; i < duLieuGioHang.length; i++) {
-            if (duLieuGioHang[i].id == id) {
+            if (duLieuGioHang[i].idSanPham == id) {
                 duLieuGioHang[i].soLuong = soLuong;
                 break;
             }
         }
-        setDanhSachSanPhamXuongLocalStorage(duLieuGioHang, "gioHang");
+        setDanhSachSanPhamXuongLocalStorage("gioHang", duLieuGioHang);
     }
 
-    // Tính tổng tiền
-    var nodeTongTien = nodeSanPham.getElementById('tongTien')[0];
+    // Tính tổng tiền sản phẩm
+    var nodeTongTien = nodeSanPham.getElementsByClassName('product-line-price')[0];
     var duLieuSanPham = layDanhSachSanPhamDuoiLocalStorage('danhSachSanPham');
     var viTri = duLieuSanPham.findIndex(sp => sp.id == id);
     var giaBan = tinhGiaBan(duLieuSanPham[viTri].giaGoc, duLieuSanPham[viTri].phanTramGiamGia);
-    nodeTongTien.innerHTML = themChamVaoSo(giaBan * soLuong) + " đ";
+    nodeTongTien.innerHTML = themChamVaoSo(giaBan * soLuong) + " ₫";
 
     tinhTongTien();
 }
 
-function tinhTongTien() {
+function tinhTongTien(coupon) {
     var tongTien = 0;
     var duLieuGioHang = layDanhSachSanPhamDuoiLocalStorage('gioHang');
     var duLieuSanPham = layDanhSachSanPhamDuoiLocalStorage('danhSachSanPham');
     for (var i = 0; i < duLieuGioHang.length; i++) {
-        var id = duLieuGioHang[i].id;
+        var id = duLieuGioHang[i].idSanPham;
         var viTri = duLieuSanPham.findIndex(sp => sp.id == id);
         var giaBan = tinhGiaBan(duLieuSanPham[viTri].giaGoc, duLieuSanPham[viTri].phanTramGiamGia);
         tongTien += giaBan * duLieuGioHang[i].soLuong;
     }
+    // cong them tien giao hang
+    var nodeChonGiaoHang = document.getElementById('chonGiaoHang');
+    var tienGiaoHang = parseInt(nodeChonGiaoHang.value);
     var nodeTongTien = document.getElementById('thanhTien');
-    nodeTongTien.innerHTML = themChamVaoSo(tongTien) + " đ";
+    nodeTongTien.innerHTML = themChamVaoSo(tongTien + tienGiaoHang) + " ₫";
+}
 
+function tinhGiaBan(giaGoc, phanTramGiamGia) {
+    return giaGoc * (100 - phanTramGiamGia) / 100;
 }

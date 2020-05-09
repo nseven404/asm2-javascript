@@ -10,7 +10,7 @@
 
 #codegiamgia {
     width: 1175px;
-    height: 120px;
+    height: 160px;
     margin: 0 auto;
     border-bottom: 2px solid gray;
 }
@@ -44,6 +44,20 @@
     border-bottom-right-radius: 44px;
     border: none;
     text-indent: 23px;
+}
+
+#message {
+    position: relative;
+    top: 10px;
+    color: green;
+    font-size: 20px;
+}
+
+#err {
+    position: relative;
+    top: 10px;
+    color: red;
+    font-size: 20px;
 }
 
 .submitcode button {

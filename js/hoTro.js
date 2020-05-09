@@ -5,3 +5,14 @@ function taoID() {
     var id = Math.random().toString().substr(2, 10) + '_' + String(thoiGianHienTai);
     return id;
 }
+
+function layDanhSachSanPhamDuoiLocalStorage(key) {
+    var jsonDanhSachSanPham = localStorage.getItem(key);
+
+    var danhSachSanPham = JSON.parse(jsonDanhSachSanPham);
+    return danhSachSanPham;
+}
+
+function setDanhSachSanPhamXuongLocalStorage(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+}
